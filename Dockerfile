@@ -1,20 +1,12 @@
-# Используем базовый образ с поддержкой Python
-FROM python:3.10.5
-
-# Устанавливаем рабочую директорию внутри контейнера
-WORKDIR /app
-
-# Копируем зависимости проекта (если есть файл requirements.txt)
-COPY requirements.txt .
-
-# Устанавливаем зависимости
-RUN pip install -r requirements.txt
-
-# Копируем остальные файлы проекта
+# Choosing an image for you container.
+FROM python:3.11.0
+# Setting your working directory
+WORKDIR /
+# This command would copy EVERY FILE from your project folder into your container, so be careful.
 COPY . .
-
-# Экспортируем порт 80
-EXPOSE 80
-
-# Команда для запуска приложения
+# Installing needed packages and dependencies.**
+RUN pip install -r requirements.txt
+# This command basically executes your main file with Python.
 CMD ["python", "main.py"]
+# Setting a port for your app communications with Telegram servers.
+EXPOSE 80/tcp
