@@ -1,6 +1,7 @@
 from typing import List
 import logging
 from pyrogram import Client, idle, filters
+from background import keep_alive
 from pyrogram.types import Message
 from pyrogram.handlers import MessageHandler
 import asyncio
@@ -35,6 +36,6 @@ async def start():
     await idle()
     await user_bot.stop()
     await bot_content.stop()
-
+keep_alive()
 if __name__ == '__main__':
     asyncio.run(start())
