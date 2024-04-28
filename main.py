@@ -8,11 +8,15 @@ import asyncio
 API_ID: int = 26973684
 API_HASH: str = 'd2ff9778152b2b5445e152a31e28b87e'
 # -1002008240526 - моя группа для тестов
-# -1001892497462 - группа @crypto
+# -1001892497462 - t.me/crypto группа @crypto
 # -1001151342291 - https://t.me/coincunews
 # -1001145462707 - https://t.me/whalebotalerts транзакции 
+# -1001343081160 - https://t.me/cryptominers_news новости крипто
+# -1001769001896 - https://t.me/CoingraphNews новости крипто
+# -1001132611527 - https://t.me/Coin_Post новости крипто RU
+# -1001321981396 - https://t.me/CRYPTUS_MEDIA новости крипто RU
 BOT_TOKEN = '6287352550:AAGd5YkTUM7w01ECX7cVj63H3JJ5Upp7-lo'
-donors_ids: List[int] = [-1001145462707, -1001151342291, -1002008240526, -1001892497462 ]
+donors_ids: List[int] = [-1001145462707, -1001151342291, -1002008240526, -1001892497462, -1001343081160,  -1001769001896, -1001132611527, -1001321981396 ]
 technical_channel: int = -1002109162311
 my_target_channel: int = -1001963897723
 async def new_post(client: Client, message: Message):
